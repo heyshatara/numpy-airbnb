@@ -1,6 +1,7 @@
-# Amsterdam AirBnB Booking Analysis
-Data Cleansing with Python, NumPy 
-Starting now, you are the Lead Data Scientist for the Amsterdam area at Airbnb! Your job is to manage Airbnb in Amsterdam, the Netherlands. We'll analyze real data from different listings along with related data, and make decisions on how we can structure our data.
+# Amsterdam AirBnB Recommendations System
+<img src="https://imgur.com/vr42hjE" height="50%" alt="Amsterdam's De Gooyer Windmill"/>
+Acting as the Lead Data Scientist for the Amsterdam area at Airbnb, we'll analyze real data from different listings along with related data, and make decisions on how we can structure our data.
+The resulting dataset will then be used to develop a recommendation system to enable tourists to identify the best AirBnB listing based on proximity to locations they plan to visit in Amsterdam.
 
 <h2>Project Description</h2>
 In this data science portfolio project, I utilized Python and NumPy to clean and analyze a dataset containing booking information for AirBnB locations in Amsterdam. The objective of this project was to clean the dataset, convert its currency and aggregate calculations. The resulting dataset was then used to develop a recommendation system to enable tourists to identify the best AirBnB listing based on proximity to locations they planned to visit in Amsterdam.
@@ -16,7 +17,7 @@ In this data science portfolio project, I utilized Python and NumPy to clean and
 The AirBnB Amsterdam Recommendation System project showcases the application of Python, NumPy, and data science techniques to derive meaningful recommendations for AirBnB accommodations in Amsterdam, ultimately assisting users in finding the most suitable listings for their selected tourist location(s).
 
 <h2>Dataset Description:</h2>
-Amsterdam subset of data from: http://insideairbnb.com/get-the-data/ (includes Amsterdam, North Holland and The Netherlands)
+Amsterdam subset of data from: http://insideairbnb.com/get-the-data/ (includes Amsterdam, North Holland)
 
 <h2>Data Cleaning and Preprocessing:</h2>
 
@@ -81,9 +82,24 @@ matrix[:5, :]
 ```
 
 ```bash
-$ python -m project_name
-#or
-$ project_name
+# Get the rate of conversaton from the US dollar to GBP
+gbp_rate = cc.convert(1, 'USD', 'GBP')
+
+# Multiply the dollar column by GBP
+matrix[:, 1] = matrix[:, 1]* gbp_rate
+```
+- We need to account for inflation which is causing Airbnb listers to raise their prices by a certain amount. In 2022, the annual inflation for GBP was 11%
+```bash
+# Multiply the dollar column by the inflation percentage (1.00 + inflation)
+matrix[:, 1] + (1.00 + 0.11)
+```
+- Round results down to the nearest two decimals using NumPy
+```bash
+# Round down the new currency column to 2 decimals
+matrix[:, 1] = np.round(matrix[:, 1], 2)
+
+# Addtional way of rounding down the new currency colun to 2 decimals
+matrix[:,1] = np.round_(matrix[:,1],decimals=2, out=None) 
 ```
 
 <h2>Recommendation System Approach:</h2>
