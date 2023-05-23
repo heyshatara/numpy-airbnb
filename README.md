@@ -20,11 +20,14 @@ Amsterdam subset of data from: http://insideairbnb.com/get-the-data/ (includes A
 
 <h2>Data Cleaning and Preprocessing:</h2>
 
-## Download dataset
+## Download Python libraries
 
 ```bash
-%%capture
-!pip install numpy pandas streamlit gdown currencyconverter
+import os
+import shutil
+
+import gdown
+from numpy import genfromtxt
 ```
 ```bash
 import numpy as np
