@@ -23,17 +23,17 @@ Amsterdam subset of data from: http://insideairbnb.com/get-the-data/ (includes A
 ## Download Python libraries
 
 ```bash
+import numpy as np
+
+# For readability purposes, scientific notation for numbers has been diabled
+np.set_printoptions(suppress=True)
+```
+```bash
 import os
 import shutil
 
 import gdown
 from numpy import genfromtxt
-```
-```bash
-import numpy as np
-
-# For readability purposes, scientific notation for numbers has been diabled
-np.set_printoptions(suppress=True)
 ```
 - Remove headers, footers, redundant IDs
 - Shift dataset by 90 degrees for improved readability
