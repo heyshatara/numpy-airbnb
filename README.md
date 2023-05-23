@@ -19,8 +19,15 @@ The AirBnB Amsterdam Recommendation System project showcases the application of 
 Single dataset of Amsterdam AirBnB listings
 
 <h2>Data Cleaning and Preprocessing:</h2>
-- 
+- Remove headers, footers, redundant IDs
+- Shift dataset by 90 degrees for improved readability
+- Filter out string characters (, and $) to perform numerical operations
+- Change dtype from string/Unicode to float32 to enable numerical operations
+
 <h2>Data Analysis and Insights:</h2>
+The Amsterdam team at Airbnb wants to provide recommendations for listings based on proximity to their destination point(s). But to make this more insightful, the rates for each listing needed to be converted to reflect the tourist's desired currency.
+We created and tested this features for tourists from the United Kingdom would would be booking in their GBP currencies.
+
 <h2>Recommendation System Approach:</h2>
 The AirBnB Amsterdam Recommendation System is a data science portfolio project that aims to provide users with personalized recommendations for the best AirBnB listings based on their planned visit locations in Amsterdam. By analyzing a dataset containing booking information for AirBnB locations in Amsterdam, this project utilizes Python and NumPy for data cleaning and analysis.
 
