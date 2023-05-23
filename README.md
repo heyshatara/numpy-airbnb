@@ -23,6 +23,10 @@ Amsterdam subset of data from: http://insideairbnb.com/get-the-data/ (includes A
 ## Download Python libraries
 
 ```bash
+%%capture
+!pip install numpy pandas streamlit gdown currencyconverter
+```
+```bash
 import numpy as np
 
 # For readability purposes, scientific notation for numbers has been diabled
