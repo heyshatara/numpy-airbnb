@@ -28,6 +28,32 @@ Single dataset of Amsterdam AirBnB listings
 The Amsterdam team at Airbnb wants to provide recommendations for listings based on proximity to their destination point(s). But to make this more insightful, the rates for each listing needed to be converted to reflect the tourist's desired currency.
 We created and tested this features for tourists from the United Kingdom would would be booking in their GBP currencies.
 
+## Import currency converter library
+
+```bash
+pip install project_name
+```
+
+## Import currency converter library
+
+```py
+from currency_converter import CurrencyConverter
+
+cc = CurrencyConverter()
+
+# Entries: airbnb_id, price_usd, latitude, longitude
+matrix[:5, :]
+
+BaseClass().base_method()
+base_function()
+```
+
+```bash
+$ python -m project_name
+#or
+$ project_name
+```
+
 <h2>Recommendation System Approach:</h2>
 The AirBnB Amsterdam Recommendation System is a data science portfolio project that aims to provide users with personalized recommendations for the best AirBnB listings based on their planned visit locations in Amsterdam. By analyzing a dataset containing booking information for AirBnB locations in Amsterdam, this project utilizes Python and NumPy for data cleaning and analysis.
 
