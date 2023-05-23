@@ -1,11 +1,8 @@
 # Amsterdam AirBnB Recommendations System
 <img src="https://imgur.com/vr42hjE" height="50%" alt="Amsterdam's De Gooyer Windmill"/>
-Acting as the Lead Data Scientist for the Amsterdam area at Airbnb, we'll analyze real data from different listings along with related data, and make decisions on how we can structure our data.
-The resulting dataset will then be used to develop a recommendation system to enable tourists to identify the best AirBnB listing based on proximity to locations they plan to visit in Amsterdam.
 
 <h2>Project Description</h2>
-In this data science portfolio project, I utilized Python and NumPy to clean and analyze a dataset containing booking information for AirBnB locations in Amsterdam. The objective of this project was to clean the dataset, convert its currency and aggregate calculations. The resulting dataset was then used to develop a recommendation system to enable tourists to identify the best AirBnB listing based on proximity to locations they planned to visit in Amsterdam.
-<br />
+The AirBnB Amsterdam Recommendation System is a data science portfolio project that aims to provide tourists with personalized recommendations for the best AirBnB listings based on proximity to their planned tourists stops in Amsterdam. The project involves data cleaning, currency conversion and aggregate calculations in Python/NumPy. The resulting recommendation system is then turned into an interactive app via Steamlit.
 
 <h2>Languages/Libraries and Utilities Used</h2>
 
@@ -66,7 +63,7 @@ matrix = np.char.replace(matrix, ',', '')
 matrix = matrix.astype(np.float32)
 ```
 
-<h2>Data Analysis and Insights:</h2>
+<h2>Currency Conversion + Inflation:</h2>
 The Amsterdam team at Airbnb wants to provide recommendations for listings based on proximity to their destination point(s). But to make this more insightful, the rates for each listing needed to be converted to reflect the tourist's desired currency.
 We created and tested this features for tourists from the United Kingdom would would be booking in their GBP currencies.
 
@@ -102,19 +99,12 @@ matrix[:, 1] = np.round(matrix[:, 1], 2)
 matrix[:,1] = np.round_(matrix[:,1],decimals=2, out=None) 
 ```
 
-<h2>Recommendation System Approach:</h2>
-The AirBnB Amsterdam Recommendation System is a data science portfolio project that aims to provide users with personalized recommendations for the best AirBnB listings based on their planned visit locations in Amsterdam. By analyzing a dataset containing booking information for AirBnB locations in Amsterdam, this project utilizes Python and NumPy for data cleaning and analysis.
+<h2>Interactive Geographic Visualization:</h2>
 
-<h2>Visualization of Findings:</h2>
-You can see the dataset as a Dataframe and as an interactive, geographic visualization [by visiting Streamlit](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/)
-All of the Amsterdam Airbnb listings are shown in red to gauge their proximity to a specific tourist spot shown in blue:
+- You can see the dataset as a Dataframe and as an interactive, geographic visualization [by visiting Streamlit](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/)
+- For example purposes, it's assumed that a tourist coming from the U.K. and looking to book an Amsterdam Airbnb in their GBP currency
+- All of the Amsterdam Airbnb listings are shown in red to gauge their proximity to a specific tourist spot shown in blue, which is set as De Hooyer Windmill in Amsterdam:
 <img src="https://i.imgur.com/0ECb6Yf.png" height="80%" alt="Amsterdam AirBnb Proximity Map"/>
-<h2>Documentation and Report:</h2>
-## Download Python libraries
-<h2>Conclusion and Key Takeaways:</h2>
-<br />
-<br />
-</p>
 
 <!--
  ```diff
