@@ -16,7 +16,7 @@ In this data science portfolio project, I utilized Python and NumPy to clean and
 The AirBnB Amsterdam Recommendation System project showcases the application of Python, NumPy, and data science techniques to derive meaningful recommendations for AirBnB accommodations in Amsterdam, ultimately assisting users in finding the most suitable listings for their selected tourist location(s).
 
 <h2>Dataset Description:</h2>
-Single dataset of Amsterdam AirBnB listings
+Subset of data from: http://insideairbnb.com/get-the-data/
 
 <h2>Data Cleaning and Preprocessing:</h2>
 
