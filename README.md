@@ -19,6 +19,19 @@ The AirBnB Amsterdam Recommendation System project showcases the application of 
 Single dataset of Amsterdam AirBnB listings
 
 <h2>Data Cleaning and Preprocessing:</h2>
+
+## Download dataset
+
+```bash
+%%capture
+!pip install numpy pandas streamlit gdown currencyconverter
+```
+```bash
+import numpy as np
+
+# For readability purposes, scientific notation for numbers has been diabled
+np.set_printoptions(suppress=True)
+```
 - Remove headers, footers, redundant IDs
 - Shift dataset by 90 degrees for improved readability
 - Filter out string characters (, and $) to perform numerical operations
@@ -43,9 +56,6 @@ cc = CurrencyConverter()
 
 # Entries: airbnb_id, price_usd, latitude, longitude
 matrix[:5, :]
-
-BaseClass().base_method()
-base_function()
 ```
 
 ```bash
