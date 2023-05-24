@@ -1,6 +1,6 @@
 # Amsterdam AirBnB Recommendations System
 
-<img src="https://imgur.com/vr42hjE" height="50%" alt="Amsterdam's De Gooyer Windmill"/>
+<img src="https://i.imgur.com/vr42hjE.png" height="50%" alt="Amsterdam's De Gooyer Windmill"/>
 
 <h2>🗺️Project Description</h2>
 The AirBnB Amsterdam Recommendation System is a data science portfolio project that aims to provide tourists with personalized recommendations for the best AirBnB listings based on proximity to their planned tourists stops in Amsterdam. The project involves data cleaning, currency conversion and aggregate calculations in Python/NumPy. The resulting recommendation system is then turned into an interactive app via Streamlit.
@@ -95,10 +95,13 @@ matrix[:, 1] = np.round(matrix[:, 1], 2)
 matrix[:,1] = np.round_(matrix[:,1],decimals=2, out=None) 
 ```
 
-<h2>🕹️Interactive Geographic Visualization:</h2>
+<h2>🕹️Visualization of Findings:</h2>
 
-- You can see the dataset as a Dataframe and as an interactive, geographic visualization [by visiting Streamlit](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/)
-- For example purposes, it's assumed that a tourist coming from the U.K. and looking to book an Amsterdam Airbnb in their GBP currency
+- A tourist is coming from the U.K. and looking to book an Amsterdam Airbnb in their GBP currency
+<img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Amsterdam Dataframe for Recommendation System"/>
+
+- You can see this same dataset as an interactive, geographic visualization [by visiting my Streamlit](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/)
+
 - All of the Amsterdam Airbnb listings are shown in red to gauge their proximity to a specific tourist spot shown in blue, which is set as De Hooyer Windmill in Amsterdam:
 <img src="https://i.imgur.com/0ECb6Yf.png" height="80%" alt="Amsterdam AirBnb Proximity Map"/>
 
