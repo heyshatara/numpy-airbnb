@@ -107,7 +107,7 @@ cc = CurrencyConverter()
 # Entries: airbnb_id, price_usd, latitude, longitude
 matrix[:5, :]
 ```
-
+- Since these recommendations will be for travelers coming from the U.K., convert dollars into the GBP currency.
 ```bash
 # Get the rate of conversaton from the US dollar to GBP
 gbp_rate = cc.convert(1, 'USD', 'GBP')
@@ -120,7 +120,7 @@ matrix[:, 1] = matrix[:, 1]* gbp_rate
 # Multiply the dollar column by the inflation percentage (1.00 + inflation)
 matrix[:, 1] + (1.00 + 0.11)
 ```
-- Round results down to the nearest two decimals using NumPy
+- The resulting prices results are too long and need to be shortened
 ```bash
 # Round down the new currency column to 2 decimals
 matrix[:, 1] = np.round(matrix[:, 1], 2)
@@ -131,7 +131,37 @@ matrix[:,1] = np.round_(matrix[:,1],decimals=2, out=None)
 
 <h2>🕹️Visualization of Findings:</h2>
 
-- A tourist is coming from the U.K. and looking to book an Amsterdam Airbnb in their GBP currency
+- A U.K. tourist is looking to book an Amsterdam Airbnb in their GBP currency. They want their booking located close to the top tourist spot they'll be visiting during their stay. The results need to be limited to that spot with math calculations + NumPy
+
+```bash
+import math
+
+def from_location_to_airbnb_listing_in_meters(lat1: float, lon1: float, lat2: list, lon2: list):
+    # Source: https://community.esri.com/t5/coordinate-reference-systems-blog
+    # /distance-on-a-sphere-the-haversine-formula/ba-p/902128
+    
+    R = 6371000  # Radius of Earth in meters
+    phi_1 = math.radians(lat1)
+    phi_2 = math.radians(lat2)
+
+    delta_phi = math.radians(lat2 - lat1)
+    delta_lambda = math.radians(lon2 - lon1)
+
+    a = (
+        math.sin(delta_phi / 2.0) ** 2
+        + math.cos(phi_1) * math.cos(phi_2) * math.sin(delta_lambda / 2.0) ** 2
+    )
+
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+    meters = R * c  # Output distance in meters
+
+    return round(meters, 0)
+```
+- Now implement a for loop (or vectorize) the from_location_to_airbnb_listing_in_meters function. 
+<img width="558" alt="image" src="https://github.com/heyshatara/numpy-airbnb/assets/122125783/6f421c08-3985-4506-bfc5-0a64ba80f0c8">
+
+- The dataset was prepped and used to make a custom DS web app with the Streamlit Python library. Here are the results:
 <img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Amsterdam Dataframe for Recommendation System"/>
 
 - You can see this same dataset as an interactive, geographic visualization [by visiting my Streamlit](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/)
