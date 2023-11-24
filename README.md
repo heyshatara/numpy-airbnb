@@ -1,4 +1,4 @@
-# Amsterdam AirBnB Recommendations System
+# Amsterdam AirBnB Recommendations System Using Python
 
 <img src="https://i.imgur.com/vr42hjE.png" height="50%" alt="Amsterdam's De Gooyer Windmill"/>
 
