@@ -72,7 +72,9 @@ matrix = matrix.T
 # Entries: airbnb_id, price_usd, latitude, longitude
 matrix[:5, :] 
 ```
-- Filter out string characters (, and $) to perform numerical operations
+<img width="514" alt="image" src="https://github.com/heyshatara/numpy-airbnb/assets/122125783/ffb5c88b-2fb2-403c-b3f7-a4c5c8db5e5d">
+
+- Filter out string characters (, and $) to perform numerical operations, and verify matrix to confirm all string characters have been removed
 ```bash
 # Remove the dollar sign
 matrix = np.char.replace(matrix, '$', '')
@@ -80,6 +82,7 @@ matrix = np.char.replace(matrix, '$', '')
 # Remove the comma
 matrix = np.char.replace(matrix, ',', '')
 ```
+<img width="384" alt="image" src="https://github.com/heyshatara/numpy-airbnb/assets/122125783/d77e1b97-f048-4b27-99f7-dab51326e108">
 
 - Change dtype from string/Unicode to float32 to enable numerical operations
 ```bash
