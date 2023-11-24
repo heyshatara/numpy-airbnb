@@ -166,3 +166,5 @@ def from_location_to_airbnb_listing_in_meters(lat1: float, lon1: float, lat2: li
 <img src="https://i.imgur.com/0ECb6Yf.png" height="80%" alt="Amsterdam AirBnb Proximity Map"/>
 You can see this same dataset as an interactive, geographic visualization [https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/).
 - All of the Amsterdam Airbnb listings are shown in red to gauge their proximity to a specific tourist spot shown in blue, which again is set as De Hooyer Windmill in Amsterdam.
+
+This site was built using [GitHub Pages](https://pages.github.com/).
