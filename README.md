@@ -32,9 +32,15 @@ import shutil
 
 import gdown
 from numpy import genfromtxt
+# Download file from Google Drive
+# This file is based on data from: http://insideairbnb.com/get-the-data/
+file_id_1 = "13fyESiH1ZEnMV6eabAyhe20t4W6peEWK"
+downloaded_file_1 = "WK1_Airbnb_Amsterdam_listings_proj.csv"
+
+# Download the file from Google Drive
+gdown.download(id=file_id_1, output=downloaded_file_1)
 ```
 <h2>🧹Data Preprocessing:</h2>
-
 # Inspect the csv and find the delimiter. Then output first four columns for inspection
 ```bash
 from numpy import genfromtxt
@@ -43,14 +49,18 @@ my_data = genfromtxt(downloaded_file_1, delimiter='|', dtype="unicode")
 ```bash
 my_data[:4]
 ```
+<img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Data Preprosing Results with Python 1"/>
+
 <h2>🧹Data Cleaning:</h2>
 - Remove headers, footers, redundant IDs
+
 ```bash
 # Remove the first column and row
 matrix = my_data[1:, 1:]
 # Print out the first four columns
 matrix[:, :4]
 ```
+<img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Data Cleaning with Python Results 1"/>
 
 - Shift dataset by 90 degrees for improved readability
 ```bash
