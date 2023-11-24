@@ -51,6 +51,7 @@ my_data = genfromtxt(downloaded_file_1, delimiter='|', dtype="unicode")
 ```bash
 my_data[:4]
 ```
+![image](https://github.com/heyshatara/numpy-airbnb/assets/122125783/b0357b24-8cf4-4ac1-a351-94aa43a20102)
 
 <img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Data Preprosing Results with Python 1"/>
 
