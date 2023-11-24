@@ -4,7 +4,8 @@
 
 <h2>🗺️Project Description</h2>
 The AirBnB Amsterdam Recommendation System is a data science portfolio project that aims to provide tourists with personalized recommendations for the best AirBnB listings based on proximity to their planned tourists stops in Amsterdam. The project involves data cleaning, currency conversion and aggregate calculations in Python/NumPy. The resulting recommendation dataset visualized as a dataframe and as an interactive geographic app like this:
-![image](https://github.com/heyshatara/numpy-airbnb/assets/122125783/bc470ba2-c1a5-4db5-8f1d-7fc80111da8e)
+![image](https://github.com/heyshatara/numpy-airbnb/assets/122125783/79a90901-2fe0-4895-a1f9-7f52c32c9ccd).
+
 
 <h2>💻Languages/Libraries and Utilities Used</h2>
 
