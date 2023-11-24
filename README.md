@@ -53,8 +53,6 @@ my_data[:4]
 ```
 ![image](https://github.com/heyshatara/numpy-airbnb/assets/122125783/b0357b24-8cf4-4ac1-a351-94aa43a20102)
 
-<img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Data Preprosing Results with Python 1"/>
-
 <h2>🧹Data Cleaning:</h2>
 - Remove headers, footers, redundant IDs
 
@@ -64,7 +62,7 @@ matrix = my_data[1:, 1:]
 # Print out the first four columns
 matrix[:, :4]
 ```
-<img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Data Cleaning with Python Results 1"/>
+![image](https://github.com/heyshatara/numpy-airbnb/assets/122125783/5767d519-40c6-43a5-9db4-4859b1c0f13e)
 
 - Shift dataset by 90 degrees for improved readability
 ```bash
