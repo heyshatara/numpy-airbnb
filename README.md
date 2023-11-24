@@ -13,7 +13,7 @@ The AirBnB Amsterdam Recommendation System is a data science portfolio project t
 <h2>📝Dataset Description:</h2>
 Amsterdam subset of data from: http://insideairbnb.com/get-the-data/ (includes Amsterdam and North Holland)
 
-<h2>🧹Data Cleaning and Preprocessing:</h2>
+<h2>🗄️Downloading the Dataset:</h2>
 
 - Download Python libraries
 ```bash
@@ -33,17 +33,32 @@ import shutil
 import gdown
 from numpy import genfromtxt
 ```
+<h2>🧹Data Preprocessing:</h2>
 
+# Inspect the csv and find the delimiter. Then output first four columns for inspection
+```bash
+from numpy import genfromtxt
+my_data = genfromtxt(downloaded_file_1, delimiter='|', dtype="unicode")
+```
+```bash
+my_data[:4]
+```
+<h2>🧹Data Cleaning:</h2>
 - Remove headers, footers, redundant IDs
 ```bash
 # Remove the first column and row
 matrix = my_data[1:, 1:]
+# Print out the first four columns
+matrix[:, :4]
 ```
 
 - Shift dataset by 90 degrees for improved readability
 ```bash
 # Shift the matrix by 90 degrees
 matrix = matrix.T
+# Print out the first five rows
+# Entries: airbnb_id, price_usd, latitude, longitude
+matrix[:5, :] 
 ```
 - Filter out string characters (, and $) to perform numerical operations
 ```bash
