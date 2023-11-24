@@ -41,14 +41,17 @@ downloaded_file_1 = "WK1_Airbnb_Amsterdam_listings_proj.csv"
 gdown.download(id=file_id_1, output=downloaded_file_1)
 ```
 <h2>🧹Data Preprocessing:</h2>
-# Inspect the csv and find the delimiter. Then output first four columns for inspection
+- Inspect the csv and find the delimiter. Then output first four columns for inspection
+
 ```bash
 from numpy import genfromtxt
 my_data = genfromtxt(downloaded_file_1, delimiter='|', dtype="unicode")
 ```
+
 ```bash
 my_data[:4]
 ```
+
 <img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Data Preprosing Results with Python 1"/>
 
 <h2>🧹Data Cleaning:</h2>
