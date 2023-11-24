@@ -88,7 +88,11 @@ matrix = np.char.replace(matrix, ',', '')
 ```bash
 # Change Unicode to float32
 matrix = matrix.astype(np.float32)
+# Print out the first five rows (and inspect the dtype for correctness)
+# Entries: airbnb_id, price_usd, latitude, longitude
+matrix[:5, :]
 ```
+<img width="523" alt="image" src="https://github.com/heyshatara/numpy-airbnb/assets/122125783/9c7975bc-5d4d-4a3f-87bf-f3a2fd1edf82">
 
 <h2>💱Currency Conversion + Inflation:</h2>
 The Amsterdam team at Airbnb wants to provide recommendations for listings based on proximity to their destination point(s). But to make this more insightful, the rates for each listing needed to be converted to reflect the tourist's desired currency.
