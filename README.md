@@ -161,9 +161,9 @@ def from_location_to_airbnb_listing_in_meters(lat1: float, lon1: float, lat2: li
 - Now implement a for loop (or vectorize) the from_location_to_airbnb_listing_in_meters function. 
 <img width="558" alt="image" src="https://github.com/heyshatara/numpy-airbnb/assets/122125783/6f421c08-3985-4506-bfc5-0a64ba80f0c8">
 
-- The dataset was prepped and visualized as a custom data science web app with the Streamlit Python library. Here are the results:
+- The dataset was prepped and visualized as a custom data science web app with the Streamlit Python library. All of the Amsterdam Airbnb listings are shown in red to gauge their proximity to a specific tourist spot shown in blue, which again is set as De Hooyer Windmill in Amsterdam:
 <img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Amsterdam Dataframe for Recommendation System"/>
 <img src="https://i.imgur.com/0ECb6Yf.png" height="80%" alt="Amsterdam AirBnb Proximity Map"/>
 You can see this same dataset as an interactive, geographic visualization [here](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/) 
-- All of the Amsterdam Airbnb listings are shown in red to gauge their proximity to a specific tourist spot shown in blue, which again is set as De Hooyer Windmill in Amsterdam.
+
 
