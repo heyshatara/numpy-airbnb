@@ -164,5 +164,5 @@ def from_location_to_airbnb_listing_in_meters(lat1: float, lon1: float, lat2: li
 - The dataset was prepped and visualized as a custom data science web app with the Streamlit Python library. Here are the results:
 <img src="https://i.imgur.com/6am49tZ.png[/img]" height="80%" alt="Amsterdam Dataframe for Recommendation System"/>
 <img src="https://i.imgur.com/0ECb6Yf.png" height="80%" alt="Amsterdam AirBnb Proximity Map"/>
-- You can see this same dataset as an interactive, geographic visualization [by visiting my Streamlit](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/).
+- You can see this same dataset as an interactive, geographic visualization [https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/](https://heyshatara-numpy-airbnb-streamlit-app-gzn89d.streamlit.app/).
 - All of the Amsterdam Airbnb listings are shown in red to gauge their proximity to a specific tourist spot shown in blue, which again is set as De Hooyer Windmill in Amsterdam.
